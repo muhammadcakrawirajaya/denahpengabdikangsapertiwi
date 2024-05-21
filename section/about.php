@@ -8,6 +8,7 @@
                 <h1 class="subtitle">Pemuda & Pemudi Pengabdi</h1>
                 <h1 class="title">Kangsa Pertiwi</h1>
                 <img src="<?= ROOT_URL ?>assets/icon/shape1.png" alt="icon" class="title-icon">
+                <img src="<?= ROOT_URL ?>assets/image/about.png" alt="about" class="title-image">
             </div>
             <div class="tabs-button">
                 <button class="tab" onclick="tabsection(event, 'aboutus')">

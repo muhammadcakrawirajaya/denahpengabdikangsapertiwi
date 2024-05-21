@@ -1,3 +1,14 @@
+// LOGIN
+var swiper = new Swiper(".swiper-container", {
+  pagination: ".swiper-pagination",
+  paginationClickable: true,
+  parallax: true,
+  speed: 600,
+  autoplay: 3500,
+  loop: true,
+  grabCursor: true
+});
+
 // COUNTUP
 const counts = document.querySelectorAll(".count");
 const speed = 97;
@@ -42,3 +53,30 @@ function tabsection(e, x) {
   document.getElementById(x).style.display = "block";
   e.currentTarget.classList.add("active");
 }
+
+// TESTIMONIAL
+$(".testimonials-container").owlCarousel({
+  loop: true,
+  autoplay: false,
+  autoplayTimeout: 6000,
+  margin: 10,
+  nav: true,
+  navText: [
+    "<i class='fa-solid fa-arrow-left'></i>",
+    "<i class='fa-solid fa-arrow-right'></i>",
+  ],
+  responsive: {
+    0: {
+      items: 1,
+      nav: false,
+    },
+    600: {
+      items: 1,
+      nav: true,
+    },
+    768: {
+      items: 2,
+    },
+  },
+});
+

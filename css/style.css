@@ -31,6 +31,16 @@
   --primary-clr: #f0bf6a;
   --heading-clr: #dadada;
   --text-clr: #767a86;
+
+
+  --bodybg: #dcdefe;
+  --grey: #d6d6d6;
+  --placeholder: #969696;
+  --white: #fff;
+  --text: #333;
+  --slider-bg: #eff3ff;
+  --login-cta-hover: #1f0098;
+  
 }
 
 body {
@@ -41,7 +51,7 @@ body {
 
 /* ----------------------------------------- START OF HEADER ----------------------------------------- */
 header {
-  position: fixed;
+  position:fixed;
   top: 0px;
   background-color: var(--primary-color);
   width: 100%;
@@ -488,6 +498,7 @@ header {
   color: var(--primary-color);
   font-size: var(--subtitile-size);
   font-weight: var(--subtitile-weight);
+  margin-bottom: 5px;
 }
 .program .title {
   font-size: var(--title-size);
@@ -506,7 +517,7 @@ header {
   grid-template-columns: repeat(4, 1fr);
   flex-wrap: nowrap;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 .card-wrapper .card {
   display: flex;
@@ -596,7 +607,7 @@ header {
   font-family: "Poppins", sans-serif;
 }
 .countup-container {
-  background-color: var(--primary-color);
+  background-color: #d8ecff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -628,7 +639,7 @@ header {
   left: 50%;
   width: 20%;
   height: 0.2rem;
-  background: var(--extra-light);
+  background: var(--text-dark);
   border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
@@ -643,18 +654,18 @@ header {
 .counter .count {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: var(--extra-light);
+  color: var(--text-dark);
 }
 .counter p {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: var(--extra-light);
+  color: var(--text-dark);
 }
 .counter i {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color:var(--extra-light);
+  color: var(--text-dark);
 }
 /* ----------------------------------------- END OF COUNTUP ----------------------------------------- */
 
@@ -669,19 +680,17 @@ header {
 .about-container {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: start;
   width: 100%;
-  height: 100vh;
 }
 .about-image {
-  width: 25%;
+  width: 350px;
   box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 /* ================== START OF TABS ================== */
 .tabs-wrapper {
-  width: 40%;
-  height: 60%;
+  min-width: 600px;
   position: relative;
 }
 .tabs-wrapper .title-container {
@@ -694,11 +703,15 @@ header {
   color: var(--primary-color);
   font-size: var(--subtitile-size);
   font-weight: var(--subtitile-weight);
+  margin-bottom: 5px;
 }
-.tabs-wrapper .title-container img {
+.tabs-wrapper .title-container .title-icon {
   width: 100px;
   height: auto;
   margin: 5px 0 20px 0;
+}
+.tabs-wrapper .title-container .title-image {
+  display: none;
 }
 .tabs-wrapper .title-container .subtitle {
   font-weight: bold;
@@ -751,6 +764,7 @@ header {
   text-align: justify;
 }
 .tabs-wrapper .tab-content .desc {
+  line-height: 2rem;
   margin-top: 10px;
 }
 .tabs-wrapper .tab-content .visi-title,
@@ -810,6 +824,490 @@ header {
 /* ================== END OF TABS ================== */
 /* ----------------------------------------- END OF ABOUT ----------------------------------------- */
 
+/* ----------------------------------------- START OF TESTIMONIAL ----------------------------------------- */
+.testimonial-body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.testimonials-section {
+  width: 100%;
+  padding: 0px 8%;
+}
+.testimonials-section .section-header {
+  max-width: 700px;
+  text-align: center;
+  margin: 30px auto 40px;
+}
+.section-header h1 {
+  position: relative;
+  font-size: 36px;
+  color: var(--primary-clr);
+}
+.testimonials-container {
+  position: relative;
+}
+.testimonials-container .testimonial-card {
+  padding: 20px;
+}
+.testimonial-card .test-card-body {
+  background-color: var(--card-clr);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+}
+.test-card-body .quote {
+  display: flex;
+  align-items: center;
+}
+.test-card-body .quote i {
+  font-size: 45px;
+  color: var(--heading-clr);
+  margin-right: 20px;
+}
+.test-card-body .quote h2 {
+  color: var(--heading-clr);
+}
+.test-card-body p {
+  margin: 10px 0px 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-clr);
+}
+.test-card-body .ratings {
+  margin-top: 20px;
+}
+.test-card-body .ratings i {
+  font-size: 17px;
+  color: var(--primary-clr);
+  cursor: pointer;
+}
+.testimonial-card .profile {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.profile .profile-image {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.profile .profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile .profile-desc {
+  display: flex;
+  flex-direction: column;
+}
+.profile-desc span:nth-child(1) {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-clr);
+}
+.profile-desc span:nth-child(2) {
+  font-size: 15px;
+  color: var(--text-clr);
+}
+.owl-nav {
+  position: absolute;
+  right: 20px;
+  bottom: -10px;
+}
+.owl-nav button {
+  border-radius: 50% !important;
+}
+.owl-nav .owl-prev i,
+.owl-nav .owl-next i {
+  padding: 10px !important;
+  border-radius: 50%;
+  font-size: 18px !important;
+  background-color: var(--card-clr) !important;
+  color: var(--primary-clr);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.owl-nav .owl-prev i:hover,
+.owl-nav .owl-next i:hover {
+  background-color: var(--primary-clr) !important;
+  color: #e9e9e9;
+}
+.owl-dots {
+  margin-top: 15px;
+}
+.owl-dots .owl-dot span {
+  background-color: #434753 !important;
+  padding: 6px !important;
+}
+.owl-dot.active span {
+  background-color: var(--primary-clr) !important;
+}
+/* ----------------------------------------- END OF TESTIMONIAL ----------------------------------------- */
+
+/* ############################################ FORM PARTS ################################################ */
+.login {
+  background: var(--bodybg);
+  height: 100vh;
+  display: flex;
+}
+
+.login-container {
+  display: flex;
+  max-width: 100%;
+  min-height: 100vh;
+  background: var(--white);
+  margin: auto;
+  width: 100%;
+  min-width: 320px;
+}
+
+.login-container .logo svg {
+  height: 40px;
+  width: 40px;
+  fill: var(--primary-color);
+}
+
+.login-container .login-form {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.login-container .login-form .login-form-inner {
+  max-width: 380px;
+  width: 95%;
+}
+
+.login-container .login-form .google-login-button .google-icon svg {
+  height: 20px;
+  display: flex;
+  margin-right: 10px;
+}
+
+.login-container .login-form .google-login-button {
+  color: var(--text);
+  border: 1px solid var(--grey);
+  margin: 40px 0 20px;
+}
+
+.login-container .login-form .sign-in-seperator {
+  text-align: center;
+  color: var(--placeholder);
+  position: relative;
+  margin: 30px 0 20px;
+}
+
+.login-container .login-form .sign-in-seperator span {
+  background: var(--white);
+  z-index: 1;
+  position: relative;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.login-container .login-form .sign-in-seperator:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--grey);
+  left: 0;
+  top: 50%;
+  z-index: 0;
+}
+
+.login-container .login-form .login-form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.login-container .login-form .login-form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.login-container .login-form .login-form-group input {
+  padding: 13px 20px;
+  box-sizing: border-box;
+  border: 1px solid var(--grey);
+  border-radius: 50px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  transition: linear 0.2s;
+}
+
+.login-container .login-form .login-form-group input:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+.login-container
+  .login-form
+  .login-form-group
+  input::-webkit-input-placeholder {
+  color: var(--placeholder);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.login-container .login-form .login-form-group.single-row {
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+/* custom checkbox */
+.login-container .login-form .custom-check input[type="checkbox"] {
+  height: 23px;
+  width: 23px;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  appearance: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 3px;
+  background: var(--white);
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.login-container .login-form .custom-check input[type="checkbox"]:checked {
+  border: 2px solid var(--primary-color);
+  background: var(--primary-color);
+}
+
+.login-container
+  .login-form
+  .custom-check
+  input[type="checkbox"]:checked:before,
+.login-container
+  .login-form
+  .custom-check
+  input[type="checkbox"]:checked:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: var(--white);
+}
+
+.login-container
+  .login-form
+  .custom-check
+  input[type="checkbox"]:checked:before {
+  width: 8px;
+  top: 11px;
+  left: 2px;
+  transform: rotate(44deg);
+}
+
+.login-container
+  .login-form
+  .custom-check
+  input[type="checkbox"]:checked:after {
+  width: 14px;
+  top: 8px;
+  left: 5px;
+  transform: rotate(-55deg);
+}
+
+.login-container .login-form .custom-check input[type="checkbox"]:focus {
+  outline: none;
+}
+
+.login-container .login-form .custom-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container .login-form .custom-check label {
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-container .login-form .link {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-container .login-form .link:hover {
+  text-decoration: underline;
+}
+
+.login-container .login-form .login-cta {
+  color: var(--white);
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  margin: 25px 0 35px;
+  background: var(--primary-color);
+}
+
+.login-container .login-form .login-cta:hover {
+  background: var(--login-cta-hover);
+}
+
+.login-container .onboarding {
+  flex: 1;
+  background: var(--slider-bg);
+  display: none;
+  width: 50%;
+}
+
+.login-container .login-form .login-form-group label .required-star {
+  color: var(--primary-color);
+  font-size: 18px;
+  line-height: 10px;
+}
+
+.login-container .rounded-button {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 13px 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+  transition: linear 0.2s;
+}
+
+.login-container .rounded-button:hover {
+  box-shadow: 0px 0px 4px 0px var(--grey);
+}
+
+.login-container .body-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.login-container .onboarding .swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-container .onboarding .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text);
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.login-container .onboarding .swiper-pagination-bullet-active {
+  background-color: var(--primary-color);
+}
+
+.login-container .onboarding .swiper-slide {
+  flex-direction: column;
+  display: flex;
+}
+
+.login-container .onboarding .swiper-slide .slide-image img {
+  width: 100%;
+  height: 80%;
+}
+.login-container .onboarding .slide-content {
+  width: 60%;
+}
+
+.login-container .onboarding .slide-content h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.login-container .onboarding .slide-content p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 30px;
+}
+
+.login-container .login-form .login-form-inner h1 {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .login-container .onboarding {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login-container {
+    height: 100vh;
+  }
+}
+
+@media screen and (width: 768px) {
+  .login-container .onboarding {
+    order: 0;
+  }
+  .login-container .login-form {
+    order: 1;
+  }
+  .login-container {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .login-container .login-form {
+    padding: 20px;
+  }
+  .login-container .login-form-group {
+    margin-bottom: 16px;
+  }
+  .login-container {
+    margin: 0;
+  }
+}
+
+
 /* ***************************************** RESPONSIVENESS **************************************** */
 @media (max-width: 1280px) {
   /* ----------------------------------------- RESPONSIVE PROGRAM ----------------------------------------- */
@@ -837,6 +1335,79 @@ header {
     text-align: center;
   }
 }
+@media (max-width: 1030px) {
+  /* ----------------------------------------- RESPONSIVE ABOUT ----------------------------------------- */
+  .about-image {
+    width: 250px;
+    margin-right: 20px;
+  }
+  .tabs-wrapper {
+    min-width: 400px;
+  }
+  .about-container {
+    justify-content: center;
+  }
+  .tabs-wrapper .tab-content .desc,
+  .tabs-wrapper .tab-content .visi-desc,
+  .tabs-wrapper .tab-content .misi-desc {
+    line-height: 1.1rem;
+    font-size: 14px;
+  }
+  .tabs-wrapper .tab-content .desc {
+    margin-top: 5px;
+  }
+  .tabs-wrapper .tab-content .visi-title,
+  .tabs-wrapper .tab-content .misi-title {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  .misi-row,
+  .filosofi-row {
+    text-align: left;
+    max-width: max(100%, 500px);
+  }
+  .misi-col > *,
+  .filosofi-col > * {
+    list-style: none;
+    padding: 0px;
+  }
+  .misi-col > * > li,
+  .filosofi-col > * > li {
+    font-size: 14px;
+    line-height: 1.1rem;
+  }
+  .misi-row ul li:before,
+  .filosofi-row ul li:before {
+    width: 8px;
+    height: 8px;
+    top: 4px;
+    left: 0px;
+  }
+  .tabs-wrapper .tab-content .filosofi-logo {
+    width: 50px;
+    margin: 5px 0 5px 0;
+  }
+  .tabs-wrapper .title-container p {
+    color: var(--primary-color);
+    font-size: var(--subtitile-size);
+    font-weight: var(--subtitile-weight);
+  }
+  .tabs-wrapper .title-container img {
+    width: 50px;
+    margin: 5px 0 10px 0;
+  }
+  .tabs-wrapper .title-container .subtitle {
+    font-size: 1rem;
+  }
+  .tabs-wrapper .title-container .title {
+    font-size: 1.5rem;
+  }
+  .tabs-wrapper .tabs-button .tab {
+    padding: 6px;
+    font-size: 10px;
+  }
+}
+
 @media (max-width: 970px) {
   /* ----------------------------------------- RESPONSIVE HERO ----------------------------------------- */
   .hero .hero-container {
@@ -1002,6 +1573,36 @@ header {
   }
 }
 
+@media (max-width: 700px) {
+  /* -----------------------------------------  RESPONSIVE ABOUT -----------------------------------------  */
+  .about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  .about-image {
+    display: none;
+  }
+  .tabs-wrapper {
+    min-width: 400px;
+  }
+  .tabs-wrapper .title-container {
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .tabs-wrapper .title-container .title-image {
+    display: block;
+    width: 150px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 600px) {
   /* ----------------------------------------- RESPONSIVE PROGRAM ----------------------------------------- */
   .program .title {
@@ -1085,4 +1686,104 @@ header {
     letter-spacing: 1px;
     padding: 0.5rem 0.5rem;
   }
+
+  /* -----------------------------------------  RESPONSIVE ABOUT -----------------------------------------  */
+  .tabs-wrapper {
+    min-width: 300px;
+  }
+  .tabs-wrapper .title-container {
+    margin-top: 20px;
+  }
+  .tabs-wrapper .title-container .title-image {
+    width: 100px;
+    margin-top: -10px;
+  }
+  .tabs-wrapper .tabs-button .tab {
+    padding: 6px;
+    font-size: 10px;
+  }
+  .tabs-wrapper .title-container .title {
+    font-size: 1rem;
+  }
+  .tabs-wrapper .title-container .subtitle {
+    font-size: 0.8rem;
+  }
+  .tabs-wrapper .title-container .title-icon {
+    width: 25px;
+  }
 }
+
+/* ############################################ STICKY PARTS ################################################ */
+.wa-floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+@keyframes pulsing {
+  to {
+    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+  }
+}
+
+.wa-floating-btn .contact_icon {
+  background-color: #42db87;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translatey(0px);
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 0 0 #42db87;
+  -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  font-weight: normal;
+  font-family: sans-serif;
+  text-decoration: none !important;
+  transition: all 300ms ease-in-out;
+}
+.wa-floating-btn .contact_icon:hover {
+  background-color: var(--green-color);
+  box-shadow: 0 0 0 0 var(--green-color);
+}
+
+.wa-floating-btn .text_icon {
+  margin-top: 8px;
+  color: var(--text-dark);
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

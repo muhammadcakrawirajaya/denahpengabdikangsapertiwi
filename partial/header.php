@@ -32,6 +32,11 @@ require 'config/database.php';
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css"
+        integrity="sha512-2ee+T+ASicQEbOrpbZ+hHFErxetDeQnlidit9FVQLwoYoAD/KXQDM2d9wcAWtYaKujj0OQ5v2pkFD8UXpIBqNA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -46,7 +51,7 @@ require 'config/database.php';
                 <div class="nav-links">
                     <ul>
                         <li class="nav-link" style="--i: .6s">
-                            <a href="#">Beranda</a>
+                            <a href="<?= ROOT_URL ?>">Beranda</a>
                         </li>
                         <li class="nav-link" style="--i: .6s">
                             <a href="#">Tentang</a>
@@ -83,12 +88,12 @@ require 'config/database.php';
                             <a href="#">Dokumentasi</a>
                         </li>
                         <li class="nav-link" style="--i: 1.35s">
-                            <a href="#">Artikel</a>
+                            <a href="<?= ROOT_URL ?>article.php">Artikel</a>
                         </li>
                     </ul>
                 </div>
                 <div class="button" style="--i: 1.8s">
-                    <a href="#">Login→</a>
+                    <a href="<?= ROOT_URL ?>login.php">More Info</a>
                 </div>
             </div>
             <div class="hamburger-menu-container">
